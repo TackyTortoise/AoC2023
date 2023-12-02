@@ -84,7 +84,7 @@ public class Day1
     }
 }
 
-public class Tests(ITestOutputHelper logger)
+public class Tests1(ITestOutputHelper logger)
 {
     [Fact]
     public void Test1()
