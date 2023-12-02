@@ -54,12 +54,10 @@ public class Day2
                 e.Value > maxValue);
         }
 
-        public int GetPower()
-        {
-            return _knownCubeCount.Values.Aggregate((x, y) => x * y);
-        }
+        public int Power =>
+            _knownCubeCount.Values.Aggregate((x, y) => x * y);
 
-        public int Id { get; set; }
+        public int Id { get; }
         private readonly Dictionary<string, int> _knownCubeCount = new();
     }
 
@@ -80,11 +78,7 @@ public class Day2
 
     public static int Part2(string inputPath)
     {
-        return File.ReadLines(inputPath).Sum(line =>
-        {
-            var game = new Game(line);
-            return game.GetPower();
-        });
+        return File.ReadLines(inputPath).Sum(line => new Game(line).Power);
     }
 }
 

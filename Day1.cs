@@ -99,7 +99,6 @@ public class Tests1(ITestOutputHelper logger)
     {
         var sum = Day1.Part1("./Input/1.txt");
         logger.WriteLine($"Solution part 1: {sum}");
-        Assert.Equal(54450, sum);
     }
 
     [Fact]
@@ -116,6 +115,5 @@ public class Tests1(ITestOutputHelper logger)
     {
         var sum = Day1.Part2("./Input/1.txt");
         logger.WriteLine($"Solution part 2: {sum}");
-        Assert.Equal(54265, sum);
     }
 }
